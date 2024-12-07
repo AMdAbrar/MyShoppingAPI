@@ -1,0 +1,18 @@
+steps to configure entityframework core:
+
+step1: install entityframework core packages from nuget
+  Package 1: entityframeworkcore
+  package 2: entityframeworkcore.sqlserver
+  package 3: entityframeworkcore.tools
+  package 3: entityframeworkcore.design
+
+
+step 2: integrate Dbcontext class
+step 3: Add Dbset<modelclassName> inside DbContext class
+step 4:create connectionString and add into appsettings.json file
+step 5: configure Dbcontext class into middleware container and pass connection string
+step 6: execute entityframeworkcore.tools commands: // go tools then to NGnutt package manager then go package manager console then write the command
+      command 1: add-migration migrationName // migrationName means our model name or property name
+      ->it will generate model into table schema
+      command 2: update-database
+      ->it will be created tables into sql server// from local to database it will create 
